@@ -4,10 +4,10 @@ function Menu() {
   return (
     <section>
       <div className="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto pt-10">
-        <div className="flex w-full md:w-1/2 text-5xl justify-center">
+        <div className="flex w-full md:w-1/2 text-5xl justify-center md:justify-start">
           <h1>Home</h1>
         </div>
-        <div className="flex flex-row md:flex-col flex-wrap w-full md:w-1/2 gap-x-5 gap-3 justify-center md:justify-end text-base mt-8 md:mt-0">
+        <div className="flex flex-row md:flex-row flex-wrap w-full md:w-1/2 gap-x-5 gap-3 justify-center md:justify-end text-base mt-8 md:mt-0">
           <div className="flex bg-white rounded-full h-9 px-6 w-auto items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -13,8 +13,8 @@ export default function LeftMonitor(props) {
     return value >= 80 && value <= 100;
   });
 
-  let jawab = error.length;
-  let bahaya = warning.length;
+  let red = error.length;
+  let yellow = warning.length;
 
   return (
     <div className="flex flex-col w-full md:w-[25%] rounded-2xl h-auto bg-white p-6 shadow-xl shadow-gray-300">
@@ -25,18 +25,18 @@ export default function LeftMonitor(props) {
       <p>Last 24 Hours</p>
 
       <h3 className="pt-3">Data Transfer</h3>
-      <div className="">
+      <div className="w-full">
         <table>
           <thead>
-            <tr>
+            <tr className="">
               <th>Error</th>
-              <th>Warning</th>
+              <th className="pl-52 md:pl-20">Warning</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>{jawab}</td>
-              <td>{bahaya}</td>
+              <td>{red}</td>
+              <td className="pl-52 md:pl-20">{yellow}</td>
             </tr>
           </tbody>
         </table>
@@ -48,13 +48,13 @@ export default function LeftMonitor(props) {
           <thead>
             <tr>
               <th>Error</th>
-              <th>Warning</th>
+              <th className="pl-52 md:pl-20">Warning</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>{jawab}</td>
-              <td>{bahaya}</td>
+              <td>{red}</td>
+              <td className="pl-52 md:pl-20">{yellow}</td>
             </tr>
           </tbody>
         </table>
@@ -66,13 +66,13 @@ export default function LeftMonitor(props) {
           <thead>
             <tr>
               <th>Error</th>
-              <th>Warning</th>
+              <th className="pl-52 md:pl-20">Warning</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>{jawab}</td>
-              <td>{bahaya}</td>
+              <td>{red}</td>
+              <td className="pl-52 md:pl-20">{yellow}</td>
             </tr>
           </tbody>
         </table>
