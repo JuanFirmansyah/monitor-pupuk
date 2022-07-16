@@ -1,0 +1,87 @@
+import "./styles.css";
+import { useEffect } from "react";
+
+export default function App() {
+  useEffect(() => {
+    addBook();
+  }, []);
+
+  let value = [];
+
+  console.log(value);
+  function generatedObject(name, volume, value) {
+    return {
+      id: +new Date(),
+      name,
+      volume,
+      value: Math.floor(Math.random() * 200) + 1
+    };
+  }
+
+  function addBook() {
+    let data = [
+      {
+        name: "Debit",
+        volumeUnit: "m3/s"
+      },
+      {
+        name: "TSS",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "pH",
+        volumeUnit: null
+      },
+      {
+        name: "NO3N",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "PO4",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "NH3N",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "TDS",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "BOD 5",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "COD",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "Fe",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "Cu",
+        volumeUnit: "mg/L"
+      },
+      {
+        name: "Cr",
+        volumeUnit: "mg/L"
+      }
+    ];
+
+    const name = data.name;
+    const volume = data.volumeUnit;
+
+    console.log(name);
+    console.log(volume);
+    const valueObject = generatedObject();
+  }
+
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
