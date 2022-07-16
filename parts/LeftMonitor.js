@@ -17,7 +17,7 @@ export default function LeftMonitor(props) {
   let bahaya = warning.length;
 
   return (
-    <div className="flex flex-col w-[25%] rounded-2xl h-auto bg-white p-6 shadow-xl shadow-gray-300">
+    <div className="flex flex-col w-full md:w-[25%] rounded-2xl h-auto bg-white p-6 shadow-xl shadow-gray-300">
       <p>Last Update</p>
       <p>14-05-2020 08:00 AM</p>
       <hr></hr>

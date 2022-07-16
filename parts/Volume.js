@@ -27,7 +27,7 @@ function Volume(props) {
 
   return (
     <section>
-      <div className="flex gap-2 mt-16 max-w-7xl flex-wrap mx-auto">
+      <div className="flex gap-2 mt-16 max-w-7xl flex-wrap mx-auto justify-center">
         {data.map((volume) => (
           <button
             type="button"
@@ -35,7 +35,7 @@ function Volume(props) {
             onClick={() => handleClick(volume.value)}
             className={[
               className.join(' '),
-              'block p-6 w-[16%] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700',
+              'block p-6 w-[45%] md:w-[16%] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700',
             ]}
           >
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

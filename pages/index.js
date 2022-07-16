@@ -81,8 +81,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <main className="flex flex-col w-full h-auto bg-gray-200 pb-8">
+      <main className="flex flex-col w-full sm:max-w-xs md:max-w-full h-auto bg-gray-200 pb-8">
+        <Header />
         <Menu />
         {/* <selection>
           <div className="flex flex-row justify-between max-w-7xl mx-auto pt-16 gap-x-8">
@@ -94,16 +94,13 @@ export default function Home() {
         <Volume data={dataBaru} handleClick={handleClick} />
       </main>
 
-      <footer className={styles.footer}>
+      <footer className="flex w-full h-12 justify-center items-center border-t-4">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Powered by Pupuk Palembang
         </a>
       </footer>
     </div>

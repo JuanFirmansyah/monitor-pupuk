@@ -41,10 +41,10 @@ function Monitor(props) {
   return (
     <>
       <selection>
-        <div className="flex flex-row justify-between max-w-7xl mx-auto pt-16 gap-x-8">
+        <div className="flex flex-col-reverse md:flex-row justify-between max-w-7xl mx-auto pt-16 gap-x-8 gap-y-4 md:gap-y-0">
           <LeftMonitor data={data} />
 
-          <div className="flex flex-col w-[75%] rounded-2xl h-auto bg-white shadow-xl shadow-gray-300 p-6">
+          <div className="flex flex-col w-full md:w-[75%] rounded-2xl h-auto bg-white shadow-xl shadow-gray-300 p-6">
             <div className="w-full flex justify-between">
               <div className="w-1/3">
                 <p className="text-3xl">pH</p>
