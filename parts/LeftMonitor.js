@@ -3,7 +3,7 @@ import React from 'react';
 export default function LeftMonitor(props) {
   const data = props.data;
 
-  let arr = data.map((obj) => obj.value);
+  let arr = data.map((obj) => obj.value[obj.value.length - 1]);
 
   let error = arr.filter((value) => {
     return value > 100;
