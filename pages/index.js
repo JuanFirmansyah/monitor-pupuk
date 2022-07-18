@@ -13,9 +13,9 @@ export default function Home() {
     handleRepeat();
   }, []);
 
-  // setInterval(() => {
-  //   handleRepeat();
-  // }, 10000);
+  setInterval(() => {
+    handleRepeat();
+  }, 10000);
 
   let data = [];
 
