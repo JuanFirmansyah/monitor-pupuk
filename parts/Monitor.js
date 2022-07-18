@@ -12,32 +12,7 @@ function Monitor(props) {
 
   let dataChart = props.numberChart;
 
-  // console.log(dataChart);
-
-  let raw = data.map((element) => ({
-    ...element,
-    number: dataChart,
-  }));
-
-  let [userData, setUserData] = useState({
-    labels: raw.map((data) => data.value),
-    datasets: [
-      {
-        label: 'Users Gained',
-        data: raw.map((data) => data.value),
-      },
-    ],
-  });
-
-  // useEffect(() => {
-  //   let ctx = document.getElementById('myChart').getContext('2d');
-  // }, []);
-
-  // function update() {
-  //   let ini = userData;
-  //   ini.datasets[0].data[5] = numberChart;
-  //   ini.update();
-  // }
+  console.log(props);
 
   return (
     <>
@@ -47,7 +22,6 @@ function Monitor(props) {
           <RightMonitor data={data} />
         </div>
       </selection>
-      {/* <Volume data={data} setNumbersChart={handleClick} /> */}
     </>
   );
 }

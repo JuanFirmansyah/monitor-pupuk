@@ -5,35 +5,70 @@ import { Chart } from 'react-chartjs-2';
 
 function RightMonitor(props) {
   let data = props.data;
+  console.log(data);
 
   let dataChart = props.numberChart;
 
-  // console.log(dataChart);
+  let dummyData = [
+    {
+      id: 0,
+      value: [Math.floor(Math.random() * 100)],
+    },
+    {
+      id: 1,
+      value: [Math.floor(Math.random() * 100)],
+    },
+    {
+      id: 2,
+      value: [Math.floor(Math.random() * 100)],
+    },
+    {
+      id: 3,
+      value: [Math.floor(Math.random() * 100)],
+    },
+    {
+      id: 4,
+      value: [Math.floor(Math.random() * 100)],
+    },
+    {
+      id: 5,
+      value: [Math.floor(Math.random() * 100)],
+    },
+    {
+      id: 6,
+      value: [Math.floor(Math.random() * 100)],
+    },
+  ];
 
-  let raw = data.map((element) => ({
-    ...element,
-    number: dataChart,
-  }));
-
-  let [userData, setUserData] = useState({
-    labels: raw.map((data) => data.value),
+  const [userData, setUserData] = useState({
+    labels: dummyData.map((datas) => datas.value),
     datasets: [
       {
         label: 'Users Gained',
-        data: raw.map((data) => data.value),
+        // isi data dari props data
+        data: dummyData.map((datas) => datas.value),
       },
     ],
   });
 
-  // useEffect(() => {
-  //   let ctx = document.getElementById('myChart').getContext('2d');
-  // }, []);
+  useEffect(() => {
+    addData();
+  }, []);
 
-  // function update() {
-  //   let ini = userData;
-  //   ini.datasets[0].data[5] = numberChart;
-  //   ini.update();
-  // }
+  function addData() {
+    dummyData.map((item) => {
+      item.value.push(Math.floor(Math.random() * 100));
+    });
+    setUserData({
+      labels: dummyData.map((datas) => datas.value),
+      datasets: [
+        {
+          label: 'Users Gained',
+          data: dummyData.map((datas) => datas.value),
+        },
+      ],
+    });
+  }
   return (
     <div className="flex flex-col w-full md:w-[75%] rounded-2xl h-auto bg-white shadow-xl shadow-gray-300 p-6">
       <div className="w-full flex justify-between">

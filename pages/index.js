@@ -8,7 +8,6 @@ import Volume from '../parts/Volume';
 export default function Home() {
   const [newData, setNewData] = useState([]);
   const [numberChart, setNumberChart] = useState();
-  console.log(newData);
 
   useEffect(() => {
     handleRepeat();
@@ -34,7 +33,7 @@ export default function Home() {
     'Cu',
     'Cr',
   ];
-  let init = [
+  let volume = [
     'm3/s',
     'mg/L',
     'mg/L',
@@ -53,7 +52,7 @@ export default function Home() {
     data.push({
       id: i,
       name: name[i],
-      volume: init[i],
+      volume: volume[i],
       value: [Math.floor(Math.random() * 100)],
     });
   }
