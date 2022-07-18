@@ -15,21 +15,6 @@ function Volume(props) {
     return value >= 80 && value <= 100;
   });
 
-  // data.map((obj) => {
-  //   if (obj.value > 100) {
-  //     className.push('bg-red-500');
-  //   } else if (obj.value >= 80 && obj.value <= 100) {
-  //     className.push('bg-yellow-500');
-  //   } else {
-  //     className.push('bg-white');
-  //   }
-  // });
-
-  // get the latest array object and properties use mapping
-  let latest = data.map((obj) => {
-    return obj.value[obj.value.length - 1];
-  });
-
   return (
     <section>
       <div className="flex gap-2 mt-16 max-w-7xl flex-wrap mx-auto justify-center">
@@ -37,7 +22,7 @@ function Volume(props) {
           <button
             type="button"
             key={volume.id}
-            onClick={() => handleClick(volume.value[volume.value.length - 1])}
+            onClick={() => handleClick(volume.value)}
             className={[
               className.join(' '),
               'block p-6 w-[45%] md:w-[16%] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700',
