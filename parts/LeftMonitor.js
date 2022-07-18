@@ -24,55 +24,55 @@ export default function LeftMonitor(props) {
       <p className="pt-3">Log Summary</p>
       <p>Last 24 Hours</p>
 
-      <h3 className="pt-3">Data Transfer</h3>
+      <h3 className="pt-3 text-center md:text-left">Data Transfer</h3>
       <div className="w-full">
-        <table>
+        <table className="flex justify-evenly md:justify-between">
           <thead>
-            <tr className="">
+            <tr className="flex flex-col">
               <th>Error</th>
-              <th className="pl-52 md:pl-20">Warning</th>
+              <th>Warning</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className="flex flex-col">
               <td>{red}</td>
-              <td className="pl-52 md:pl-20">{yellow}</td>
+              <td>{yellow}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h3 className="pt-3">Measurement</h3>
+      <h3 className="pt-3 text-center md:text-left">Measurement</h3>
       <div className="">
-        <table>
+        <table className="flex justify-evenly md:justify-between">
           <thead>
-            <tr>
+            <tr className="flex flex-col">
               <th>Error</th>
-              <th className="pl-52 md:pl-20">Warning</th>
+              <th>Warning</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className="flex flex-col">
               <td>{red}</td>
-              <td className="pl-52 md:pl-20">{yellow}</td>
+              <td>{yellow}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <h3 className="pt-3">Device Health</h3>
+      <h3 className="pt-3 text-center md:text-left">Device Health</h3>
       <div className="">
-        <table>
+        <table className="flex justify-evenly md:justify-between">
           <thead>
-            <tr>
+            <tr className="flex flex-col">
               <th>Error</th>
-              <th className="pl-52 md:pl-20">Warning</th>
+              <th>Warning</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr className="flex flex-col">
               <td>{red}</td>
-              <td className="pl-52 md:pl-20">{yellow}</td>
+              <td>{yellow}</td>
             </tr>
           </tbody>
         </table>

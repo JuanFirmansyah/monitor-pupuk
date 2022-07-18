@@ -3,7 +3,7 @@ import React from 'react';
 function Menu() {
   return (
     <section>
-      <div className="flex flex-col md:flex-row justify-center items-center max-w-7xl mx-auto pt-10">
+      <div className="flex flex-col md:flex-row justify-center items-center md:max-w-7xl mx-auto pt-10">
         <div className="flex w-full md:w-1/2 text-5xl justify-center md:justify-start">
           <h1>Home</h1>
         </div>

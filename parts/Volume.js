@@ -25,6 +25,11 @@ function Volume(props) {
   //   }
   // });
 
+  // get the latest array object and properties use mapping
+  let latest = data.map((obj) => {
+    return obj.value[obj.value.length - 1];
+  });
+
   return (
     <section>
       <div className="flex gap-2 mt-16 max-w-7xl flex-wrap mx-auto justify-center">
@@ -32,7 +37,7 @@ function Volume(props) {
           <button
             type="button"
             key={volume.id}
-            onClick={() => handleClick(volume.value)}
+            onClick={() => handleClick(volume.value[volume.value.length - 1])}
             className={[
               className.join(' '),
               'block p-6 w-[45%] md:w-[16%] bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700',
@@ -44,7 +49,7 @@ function Volume(props) {
 
             <div className="flex gap-x-1">
               <p className="font-normal text-gray-700 dark:text-gray-400 mt-7">
-                {volume.value}
+                {volume.value[volume.value.length - 1]}
               </p>
               <p className="font-normal text-gray-700 dark:text-gray-400 mt-7">
                 {volume.volume}
